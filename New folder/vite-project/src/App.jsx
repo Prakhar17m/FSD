@@ -6,7 +6,7 @@ import Registration from "./components/Registration";
 import Dashboard from "./components/Dashboard";
 
 function App() {
-  const [store, setStore] = useState({email: "agarwal22041@gmail.com", pwd: "23" }); 
+  const [store, setStore] = useState({email: "Prakharmehrotra@gmail.com", pwd: "45" }); 
 
   return (
     <div>

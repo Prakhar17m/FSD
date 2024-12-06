@@ -11,7 +11,7 @@ function Login({ regDataLogin }) {
     e.preventDefault();
     if (regDataLogin?.email === email && regDataLogin?.pwd === pwd) {
       alert("Login Successful");
-      navigate("/dash"); 
+      navigate("/dashboard"); 
     } else {
       alert("Login Failed");
     }
