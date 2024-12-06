@@ -1,0 +1,23 @@
+react === first name  = FaxJS or F-bolt
+          first deployed in 2011
+          and released in 2013
+          designed by jordon + team +versions 0.3.0 in meta
+          it is a liberary of js and use to work fast
+          current versions = 18.3.1
+          works on SPA(single page application)
+          for mobile application  we can use react native 
+          for web usage we will use react and react dom
+            
+          possible way to work with react====
+          1>CDN 
+               help to ode in react directly using link
+          2>Bundler  ->CRA(webpack)
+                     ->Parcel(Parcel)
+                     ->Vite(ESbuild)
+
+
+        recancilation == in this we use algo
+
+
+        
+         

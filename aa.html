@@ -2,12 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Hello</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <link rel="icon" href="favicon.png">
+  <title>Hola Coders</title>
+  <style>
+    #parent {
+      text-align: center;
+      font-size: large;
+      border: solid black 2px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-
+    <h1>GitHub Account</h1>
+    <div id="parent"></div>
+    <h3>Enter username:</h3>
+    <input type="text" placeholder="Enter Username:" id="usernameInput">
+    <button onclick="getData()">Click Me</button>
+    
+    <script>
+        function getData() {
+            const parentDiv = document.getElementById("parent");
+            const username = document.getElementById("usernameInput").value; 
+            parentDiv.innerHTML = '';
+            fetch(`https://api.github.com/users/${username}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('User  not found'); 
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    parentDiv.innerHTML = `
+                        <p><strong>Username:</strong> ${data.login}</p>
+                        <p><strong>Name:</strong> ${data.name}</p>
+                        <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+                        <p><strong>Followers:</strong> ${data.followers}</p>
+                        <img src="${data.avatar_url}" alt="Avatar" width="100">
+                    `;
+                })
+                .catch(error => {
+                    parentDiv.innerHTML = `<p>Error in fetching data: ${error.message}</p>`;
+                    console.error("Error:", error);
+                });
+        }
+    </script>
 </body>
 </html>

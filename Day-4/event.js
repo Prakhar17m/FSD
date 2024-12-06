@@ -63,16 +63,33 @@
 
 
 
-function getRoll(num, delay){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("rollno is:",num);
-            resolve("successfull doney");
-        }, delay)
-    });
-}
-getRoll(1, 1000).then(() => {
-    getRoll(2, 2000).then(() => {
-      getRoll(3, 30000);
-    });
-  });
+// function getRoll(num, delay){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("rollno is:",num);
+//             resolve("successfull doney");
+//         }, delay)
+//     });
+// }
+// getRoll(1, 1000).then(() => {
+//     getRoll(2, 2000).then(() => {
+//       getRoll(3, 30000);
+//     });
+//   }); 
+
+
+// let promise = new Promise((resolve,reject)=>{
+//     resolve({user:"prakhar",pass: "123446"});
+// })
+// promise.then((data)=>{
+//     console.log(data);
+//     return data;
+// }).then((res)=>{
+//     console.log(res.user);
+// }).catch(() =>{
+//     console.log("error");
+// }).finally(() =>{
+//     console.log("finally");
+// })
+
+
